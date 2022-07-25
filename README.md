@@ -26,7 +26,15 @@ Is a small window to track, copy burst time, record 5 burst time within an hour�
 - v1.0.0 Plugin collation and release
 
 #### github code
-https://github.com/chenbool/uutools
+https://github.com/chenbool/BoomTime
 
 
 JOIN US ON QQ Group: 484043598
+
+---
+
+它的功能是重置副本，统计一些副本常用信息。功能比较简单，代码也比较少，属于轻量级插件，可下载以备不时之需
+
+显示的可用次数，意为当前可用刷本次数，在5次内重置当前副本不会爆本。
+
+当副本结束，出本后会自动进行通报，报告当前副本信息，上次副本所用时长，杀怪数量，获取经验等等
