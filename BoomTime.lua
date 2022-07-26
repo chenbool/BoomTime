@@ -77,8 +77,8 @@ title:SetText("\124CFFFF0000副本监控\124r ");
 local bg_board = CreateFrame("Frame", nil, UIParent,"BackdropTemplate");
 bg_board.Bg = board:CreateTexture(nil, "BACKGROUND")
 bg_board.Bg:SetTexture("Interface\\LevelUp\\MinorTalents")
-bg_board.Bg:SetPoint("TOP", board, "TOPLEFT", 68, 8)
-bg_board.Bg:SetSize(250, 135)
+bg_board.Bg:SetPoint("TOP", board, "TOPLEFT", 65, 8)
+bg_board.Bg:SetSize(230, 135)
 bg_board.Bg:SetTexCoord(0, 400/512, 341/512, 407/512)
 bg_board.Bg:SetVertexColor(1, 1, 1, 0.4)
 bg_board:Show();
