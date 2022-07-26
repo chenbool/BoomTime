@@ -44,8 +44,8 @@ local var = {
 local instance_timer_sv = nil;
 
 
-local board = CreateFrame("Frame", nil, UIParent,"BackdropTemplate");
-board:SetSize(180, 100);
+local board = CreateFrame("Frame", nil, UIParent, "BackdropTemplate");
+board:SetSize(140, 120);
 -- 设置背景
 -- board:SetBackdrop({
 --     bgFile = "Interface/ChatFrame/ChatFrameBackground",
@@ -61,7 +61,7 @@ board:SetMovable(true);
 
 local title = board:CreateFontString(nil, "OVERLAY");
 title:SetFont(GameFontNormal:GetFont(), 16);
-title:SetPoint("TOPLEFT", board, "TOPLEFT", 0, 25 );
+title:SetPoint("TOPLEFT", board, "TOPLEFT", 0, 0 );
 title:Show();
 title:SetText("\124CFFFF0000副本监控\124r ");
 
@@ -77,10 +77,10 @@ title:SetText("\124CFFFF0000副本监控\124r ");
 local bg_board = CreateFrame("Frame", nil, UIParent,"BackdropTemplate");
 bg_board.Bg = board:CreateTexture(nil, "BACKGROUND")
 bg_board.Bg:SetTexture("Interface\\LevelUp\\MinorTalents")
-bg_board.Bg:SetPoint("TOP", board, "TOPLEFT", 60, 35)
-bg_board.Bg:SetSize(230, 130)
+bg_board.Bg:SetPoint("TOP", board, "TOPLEFT", 68, 8)
+bg_board.Bg:SetSize(250, 135)
 bg_board.Bg:SetTexCoord(0, 400/512, 341/512, 407/512)
-bg_board.Bg:SetVertexColor(1, 1, 1, 0.28)
+bg_board.Bg:SetVertexColor(1, 1, 1, 0.4)
 bg_board:Show();
 
 -- board:EnableMouse(true);
@@ -143,13 +143,18 @@ local lines = {  };
 for i = 1, 5 do
     local left = board:CreateFontString(nil, "OVERLAY");
     left:SetFont(GameFontNormal:GetFont(), 16);
-    left:SetPoint("TOPLEFT", board, "TOPLEFT", 0, - 17 * (i - 1));
+    left:SetPoint("TOPLEFT", board, "TOPLEFT", 0, - 20 * (i - 0));
+
+    -- if i == 1 then
+    --     left:SetPoint("TOPLEFT", board, "TOPLEFT", 15, - 25 * (i - 0));
+    -- end
+
     left:Show();
     left:SetText("\124cffffff00副本次数" .. i .. "\124r: ");
 
     local line = board:CreateFontString(nil, "OVERLAY");
     line:SetFont(GameFontNormal:GetFont(), 16);
-    line:SetPoint("LEFT", left, "RIGHT", 0, 0);
+    line:SetPoint("LEFT", left, "RIGHT", 10, 0);
     line:Show();
     line:SetText("\124cff00ff00 可用\124r");
     line.id = i;
